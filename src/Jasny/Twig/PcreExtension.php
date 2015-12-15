@@ -25,14 +25,14 @@ class PcreExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'preg_quote' => new \Twig_SimpleFilter($this, 'quote'),
-            'preg_match' => new \Twig_SimpleFilter($this, 'match'),
-            'preg_get' => new \Twig_SimpleFilter($this, 'get'),
-            'preg_get_all' => new \Twig_SimpleFilter($this, 'getAll'),
-            'preg_grep' => new \Twig_SimpleFilter($this, 'grep'),
-            'preg_replace' => new \Twig_SimpleFilter($this, 'replace'),
-            'preg_filter' => new \Twig_SimpleFilter($this, 'filter'),
-            'preg_split' => new \Twig_SimpleFilter($this, 'split'),
+            'preg_quote' => new \Twig_SimpleFilter('preg_quote', array($this, 'quote')),
+            'preg_match' => new \Twig_SimpleFilter('preg_match', array($this, 'match')),
+            'preg_get' => new \Twig_SimpleFilter('preg_get', array($this, 'get')),
+            'preg_get_all' => new \Twig_SimpleFilter('preg_get_all', array($this, 'getAll')),
+            'preg_grep' => new \Twig_SimpleFilter('preg_grep', array($this, 'grep')),
+            'preg_replace' => new \Twig_SimpleFilter('preg_replace', array($this, 'replace')),
+            'preg_filter' => new \Twig_SimpleFilter('preg_filter', array($this, 'filter')),
+            'preg_split' => new \Twig_SimpleFilter('preg_split', array($this, 'split')),
         );
     }
 
